@@ -16,18 +16,16 @@ function isPalendrome(cleanedSentence) {
     return isPalendrome;
 }
 
-function calculateLetterFrequency(cleanedSentences) {
+function calculateLetterFrequency(cleanedSentence) {
     let letterFrequency = {};
 
-    cleanedSentences.forEach(cleanedSentence => {
-        cleanedSentence.split('').forEach(character => {
-            if (letterFrequency[character] === undefined) {
-                letterFrequency[character] = 1;
-            } else {
-                letterFrequency[character] += 1;
-            }
-        })
-    });
+    cleanedSentence.split('').forEach(character => {
+        if (letterFrequency[character] === undefined) {
+            letterFrequency[character] = 1;
+        } else {
+            letterFrequency[character] += 1;
+        }
+    })
 
     return letterFrequency;
 }

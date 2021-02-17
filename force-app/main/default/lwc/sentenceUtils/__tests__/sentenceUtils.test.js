@@ -43,13 +43,16 @@ describe('calculateLetterFrequency()', () => {
     it('should calculate normalized letter frequency', () => {
         let sentence1 = cleanSentence('aAa');
         let sentence2 = cleanSentence('Bbc');
-        let result = {
-            'a' : 3,
+        let result1 = {
+            'a' : 3
+        }
+        let result2 = {
             'b' : 2,
             'c' : 1
         }
 
-        expect(calculateLetterFrequency([sentence1, sentence2])).toStrictEqual(result);
+        expect(calculateLetterFrequency(sentence1)).toStrictEqual(result1);
+        expect(calculateLetterFrequency(sentence2)).toStrictEqual(result2);
     })
 })
 

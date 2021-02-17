@@ -1,0 +1,18 @@
+<template>
+    <h1>Sentence Reader</h1>
+    <lightning-input type="file"
+        label="Upload Text file"
+        accept=".txt"
+        onchange={handleFilesChange}>
+    </lightning-input>
+    <ul>
+    <template for:each={palindromeSentences} for:item="sentence">
+        <li key={sentence}>
+            {sentence}
+        </li>
+    </template>
+    </ul>
+    <div>
+        {letterFrequencySerialized}
+    </div>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <ul>
+        <template for:each={getLetterFreqIterable} for:item="entry">
+            <li key={entry.letter}>
+                {entry.letter} - {entry.count}
+            </li>
+        </template>
+    </ul>
+</template>

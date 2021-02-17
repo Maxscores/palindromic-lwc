@@ -28,4 +28,5 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [x] file input
 - [x] read file
 - [x] have child component for displaying letter freq
+- [ ] have child component for displaying sentences
 - [ ] design UI to display sentences and counts of letter frequency

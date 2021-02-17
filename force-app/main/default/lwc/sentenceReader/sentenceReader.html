@@ -5,16 +5,8 @@
         accept=".txt"
         onchange={handleFilesChange}>
     </lightning-input>
-    <ul>
-    <template for:each={palindromeSentences} for:item="sentence">
-        <li key={sentence}>
-            {sentence}
-        </li>
+    <template if:true={fileProcessed}>
+        <c-sentence-display sentences={palindromeSentences}></c-sentence-display>
+        <c-letter-frequency letter-frequency={letterFrequency}></c-letter-frequency>
     </template>
-    </ul>
-    <div>
-        <c-letter-frequency letter-frequency={letterFrequency}>
-
-        </c-letter-frequency>
-    </div>
 </template>

@@ -2,6 +2,7 @@ import { LightningElement, track } from 'lwc';
 import {cleanSentence, isPalendrome, calculateLetterFrequency} from 'c/sentenceUtils';
 
 export default class SentenceReader extends LightningElement {
+    @track fileProcessed = false;
     @track
     palindromeSentences = [];
 
@@ -9,6 +10,7 @@ export default class SentenceReader extends LightningElement {
     letterFrequency;
 
     handleFilesChange(event) {
+        this.fileProcessed = false;
         let fileList = event.target.files;
         fileList[0].text()
             .then(fileContent => {
@@ -22,6 +24,11 @@ export default class SentenceReader extends LightningElement {
                     }
                 });
                 this.letterFrequency = calculateLetterFrequency(cleanedPalindromeSentences);
+                this.fileProcessed = true;
+            })
+            .catch(e => {
+                console.error(e);
+                this.fileProcessed = false;
             })
     }
 }

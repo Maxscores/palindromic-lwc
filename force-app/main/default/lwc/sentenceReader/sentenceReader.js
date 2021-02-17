@@ -27,7 +27,6 @@ export default class SentenceReader extends LightningElement {
     letterFrequency;
 
     handleFilesChange(event) {
-        console.log(event.target.files[0]);
         let fileList = event.target.files;
         fileList[0].text()
             .then(fileContent => {

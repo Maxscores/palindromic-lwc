@@ -16,10 +16,10 @@ function isPalendrome(cleanedSentence) {
     return isPalendrome;
 }
 
-function calculateLetterFrequency(cleanedSentence) {
+function calculateLetterFrequency(cleanedSentences) {
     let letterFrequency = {};
 
-    cleanedSentence.split('').forEach(character => {
+    cleanedSentences.join('').split('').forEach(character => {
         if (letterFrequency[character] === undefined) {
             letterFrequency[character] = 1;
         } else {

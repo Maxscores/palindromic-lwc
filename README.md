@@ -25,7 +25,7 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [x] clean sentence 
 - [x] determine if sentence is palindrome
 - [x] count palindrome letters
-- [ ] file input
-- [ ] read file
+- [x] file input
+- [x] read file
 - [ ] design UI to display sentences and counts of letter frequency
 - [ ] have child component for displaying letter freq

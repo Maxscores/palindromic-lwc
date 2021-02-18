@@ -1,5 +1,5 @@
 import { LightningElement, track } from 'lwc';
-import {cleanSentence, isPalendrome, calculateLetterFrequency} from 'c/sentenceUtils';
+import {cleanSentence, isPalindrome, calculateLetterFrequency} from 'c/sentenceUtils';
 
 export default class SentenceReader extends LightningElement {
     @track fileProcessed = false;
@@ -18,7 +18,7 @@ export default class SentenceReader extends LightningElement {
                 let cleanedPalindromeSentences = [];
                 sentences.forEach(sentence => {
                     let cleanedSentence = cleanSentence(sentence);
-                    if (isPalendrome(cleanedSentence)) {
+                    if (isPalindrome(cleanedSentence)) {
                         this.palindromeSentences.push(sentence);
                         cleanedPalindromeSentences.push(cleanedSentence);
                     }

@@ -2,18 +2,18 @@ function cleanSentence(sentence) {
     return sentence.replace(/[^a-zA-Z]/g,'').toLowerCase();
 }
 
-function isPalendrome(cleanedSentence) {
+function isPalindrome(cleanedSentence) {
     let splitSentence = cleanedSentence.split('');
 
-    let isPalendrome = true;
+    let isPalindrome = true;
     // there is likely a way to do this recursively. Will come back if I have time
-    while(splitSentence.length > 1 && isPalendrome) {
+    while(splitSentence.length > 1 && isPalindrome) {
         if (splitSentence.pop() !== splitSentence.shift()) {
-            isPalendrome = false;
+            isPalindrome = false;
         }
     }
 
-    return isPalendrome;
+    return isPalindrome;
 }
 
 function calculateLetterFrequency(cleanedSentences) {
@@ -32,4 +32,4 @@ function calculateLetterFrequency(cleanedSentences) {
     });;
 }
 
-export {cleanSentence, isPalendrome, calculateLetterFrequency};
+export {cleanSentence, isPalindrome, calculateLetterFrequency};

@@ -1,4 +1,4 @@
-import {cleanSentence, isPalendrome, calculateLetterFrequency} from '../sentenceUtils';
+import {cleanSentence, isPalindrome, calculateLetterFrequency} from '../sentenceUtils';
 
 describe('cleanSentence()', () => {
     it('should remove all non letters and normalize case', () => {
@@ -12,30 +12,30 @@ describe('cleanSentence()', () => {
     })
 })
 
-describe('isPalendrome()', () => {
-    it('should find palendromes of even length', () => {
-        let palendrome = cleanSentence('abccba');
-        expect(isPalendrome(palendrome)).toBe(true);
+describe('isPalindrome()', () => {
+    it('should find palindromes of even length', () => {
+        let palindrome = cleanSentence('abccba');
+        expect(isPalindrome(palindrome)).toBe(true);
     }) 
 
-    it('should find palendromes of odd length', () => {
-        let palendrome = cleanSentence('abcba');
-        expect(isPalendrome(palendrome)).toBe(true);
+    it('should find palindromes of odd length', () => {
+        let palindrome = cleanSentence('abcba');
+        expect(isPalindrome(palindrome)).toBe(true);
     }) 
 
-    it('should find palendromes with various capitalization', () => {
-        let palendrome = cleanSentence('AbcBa');
-        expect(isPalendrome(palendrome)).toBe(true);
+    it('should find palindromes with various capitalization', () => {
+        let palindrome = cleanSentence('AbcBa');
+        expect(isPalindrome(palindrome)).toBe(true);
     }) 
 
-    it('should find non-palendromes of even length', () => {
-        let palendrome = cleanSentence('abccdba');
-        expect(isPalendrome(palendrome)).toBe(false);
+    it('should find non-palindromes of even length', () => {
+        let palindrome = cleanSentence('abccdba');
+        expect(isPalindrome(palindrome)).toBe(false);
     }) 
 
-    it('should find non-palendromes of odd length', () => {
-        let palendrome = cleanSentence('abdca');
-        expect(isPalendrome(palendrome)).toBe(false);
+    it('should find non-palindromes of odd length', () => {
+        let palindrome = cleanSentence('abdca');
+        expect(isPalindrome(palindrome)).toBe(false);
     }) 
 })
 

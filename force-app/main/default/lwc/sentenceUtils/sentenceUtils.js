@@ -27,7 +27,9 @@ function calculateLetterFrequency(cleanedSentences) {
         }
     })
 
-    return letterFrequency;
+    return Object.keys(letterFrequency).map((key) => {
+        return {'letter': key, 'count': letterFrequency[key]};
+    });;
 }
 
 export {cleanSentence, isPalendrome, calculateLetterFrequency};

@@ -1,12 +1,26 @@
 <template>
-    <h1>Sentence Reader</h1>
-    <lightning-input type="file"
-        label="Upload Text file"
-        accept=".txt"
-        onchange={handleFileUpload}>
-    </lightning-input>
-    <template if:true={fileProcessed}>
-        <c-sentence-display sentences={palindromeSentences}></c-sentence-display>
-        <c-letter-frequency letter-frequency={letterFrequency}></c-letter-frequency>
-    </template>
+    <div class="slds-box slds-theme_default">
+        <h1>Sentence Reader</h1>
+        <lightning-layout
+            multiple-rows
+            vertical-align="start"
+        >
+            <lightning-layout-item size="12" padding="around-small">
+    
+                <lightning-input type="file"
+                    label="Upload Text file"
+                    accept=".txt"
+                    onchange={handleFileUpload}>
+                </lightning-input>
+            </lightning-layout-item>
+            <template if:true={fileProcessed}>
+                <lightning-layout-item size="6" padding="around-small">
+                    <c-sentence-display sentences={palindromeSentences}></c-sentence-display>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <c-letter-frequency letter-frequency={letterFrequency}></c-letter-frequency>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </div>
 </template>

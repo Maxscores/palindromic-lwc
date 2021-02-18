@@ -1,9 +1,8 @@
 <template>
-    <ul>
-        <template for:each={getLetterFreqIterable} for:item="entry">
-            <li key={entry.letter}>
-                {entry.letter} - {entry.count}
-            </li>
-        </template>
-    </ul>
+    <lightning-datatable
+        key-field="id"
+        columns={columns}
+        data={letterFrequency}
+        hide-checkbox-column>
+    </lightning-datatable>
 </template>

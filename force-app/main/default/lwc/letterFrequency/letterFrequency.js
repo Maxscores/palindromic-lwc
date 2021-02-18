@@ -1,14 +1,17 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, track } from 'lwc';
+
 
 export default class LetterFrequency extends LightningElement {
     @api letterFrequency;
-
-
-    get getLetterFreqIterable() {
-        if (this.letterFrequency !== undefined) {
-            return Object.keys(this.letterFrequency).map((key) => {
-                return {'letter': key, 'count': this.letterFrequency[key]};
-            });
+    columns = [
+        {
+            label: 'Letter', 
+            fieldName: 'letter', 
+        }, 
+        {
+            label: 'Usage Frequency', 
+            fieldName: 'count', 
+            type: 'number', 
         }
-    }
+    ];
 }

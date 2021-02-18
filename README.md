@@ -1,23 +1,20 @@
 # Salesforce DX Project: Next Steps
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Test Repo for Canonical Interview question. Build using SFDX. 
 
-## How Do You Plan to Deploy Your Changes?
-
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Project Setup for Scratch Org
+- Setup SFDX on your machine
+- Authorize a Dev Hub using the command `sfdx auth:web:login -a DevHub`
+- Build Scrach org using `sfdx force:org:create -u <your-org-name> -f config/project-scratch-def.json`
+- Open Scratch org using `sfdx force:org:open -u <your-org-name>`
+- Run Tests `sfdx force:apex:test:run -u <your-org-name> -w 10`
+- Run Tests with code coverage `sfdx force:apex:test:run -u <your-org-name> -w 10 -c -r human`
 
 
+## Install into an Org 
+- view `sfdx-project.json` to see versions
+- run from alias `sfdx force:package:install -p <alias-for-desired-version> -u DevHub -k test1234 -w 10`
+- run from package id `sfdx force:package:install -p <04t...> -u DevHub -k test1234 -w 10
 
 
 ## Project Steps
@@ -28,5 +25,14 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [x] file input
 - [x] read file
 - [x] have child component for displaying letter freq
-- [ ] have child component for displaying sentences
-- [ ] design UI to display sentences and counts of letter frequency
+- [x] have child component for displaying sentences
+- [x] design UI to display sentences and counts of letter frequency
+
+
+## Read All About It
+
+- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+

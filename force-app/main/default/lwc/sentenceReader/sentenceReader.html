@@ -3,7 +3,7 @@
     <lightning-input type="file"
         label="Upload Text file"
         accept=".txt"
-        onchange={handleFilesChange}>
+        onchange={handleFileUpload}>
     </lightning-input>
     <template if:true={fileProcessed}>
         <c-sentence-display sentences={palindromeSentences}></c-sentence-display>

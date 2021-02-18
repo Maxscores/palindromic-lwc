@@ -9,7 +9,7 @@ export default class SentenceReader extends LightningElement {
     @track
     letterFrequency;
 
-    handleFilesChange(event) {
+    handleFileUpload(event) {
         this.fileProcessed = false;
         let fileList = event.target.files;
         fileList[0].text()

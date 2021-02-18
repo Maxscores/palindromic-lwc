@@ -16,6 +16,9 @@ Test Repo for Canonical Interview question. Build using SFDX.
 - run from alias `sfdx force:package:install -p <alias-for-desired-version> -u DevHub -k test1234 -w 10`
 - run from package id `sfdx force:package:install -p <04t...> -u DevHub -k test1234 -w 10
 
+## Run unit tests
+The utility functions of the LWC are unit tested. You can run these using `npm run test:unit`
+
 
 ## Project Steps
 

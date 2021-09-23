@@ -1,4 +1,4 @@
-import { LightningElement, api, track, wire } from 'lwc';
+import { LightningElement, api, wire, track } from 'lwc';
 
 
 export default class LetterFrequency extends LightningElement {

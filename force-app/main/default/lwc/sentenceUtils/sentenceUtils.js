@@ -12,6 +12,8 @@ function isPalindrome(cleanedSentence) {
             isPalindrome = false;
         }
     }
+    
+    console.log('hello');
 
     return isPalindrome;
 }
